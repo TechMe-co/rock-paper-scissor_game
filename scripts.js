@@ -12,16 +12,28 @@ the computer and return it as the winner.
 after 5 rounds.
 */
 
+let str1 = 'rock';
+let str2 = 'paper';
+let str3 = 'scissor';
+
 function getComputerChoice() {
-    let str1 = 'rock';
-    let str2 = 'paper';
-    let str3 = 'scissor';
-    if (Math.floor(Math.random() * 10) === 0) {
+    if (Math.floor(Math.random() * 20) <= 5) {
         console.log(str1);
-    } else if (Math.floor(Math.random() * 10) === 9) {
+    } else if (Math.floor(Math.random() * 20) <= 10) {
         console.log(str2);
-    } else {
+    } else if (Math.floor(Math.random() * 20) <= 15) {
         console.log(str3);
     }
 }
 getComputerChoice();
+
+function getHumanChoice() {
+    let userInput = prompt("Let's play: Rock, Paper, Scisssor", "Shoot!!!");
+    if (userInput === str1 || userInput === str2 || userInput === str3) {
+        console.log(userInput);
+    } else {
+        console.log("Play fair!")
+    }
+}
+
+getHumanChoice();
