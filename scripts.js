@@ -11,3 +11,17 @@ the computer and return it as the winner.
 6. Create a function that uses function 5 as a variable to delcare the final winner 
 after 5 rounds.
 */
+
+function getComputerChoice() {
+    let str1 = 'rock';
+    let str2 = 'paper';
+    let str3 = 'scissor';
+    if (Math.floor(Math.random() * 10) === 0) {
+        console.log(str1);
+    } else if (Math.floor(Math.random() * 10) === 9) {
+        console.log(str2);
+    } else {
+        console.log(str3);
+    }
+}
+getComputerChoice();
