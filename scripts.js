@@ -16,24 +16,45 @@ let str1 = 'rock';
 let str2 = 'paper';
 let str3 = 'scissor';
 
+// str3 > str2
+// str2 > str1
+// str1 > str3
+
 function getComputerChoice() {
     if (Math.floor(Math.random() * 20) <= 5) {
-        console.log(str1);
+        return str1;
     } else if (Math.floor(Math.random() * 20) <= 10) {
-        console.log(str2);
+        return str2;
     } else if (Math.floor(Math.random() * 20) <= 15) {
-        console.log(str3);
+        return str3;
     }
 }
-getComputerChoice();
+// getComputerChoice();
 
 function getHumanChoice() {
     let userInput = prompt("Let's play: Rock, Paper, Scisssor", "Shoot!!!");
     if (userInput === str1 || userInput === str2 || userInput === str3) {
-        console.log(userInput);
+        return userInput;
     } else {
-        console.log("Play fair!")
+        return "Play fair!";
     }
 }
 
-getHumanChoice();
+// getHumanChoice();
+
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound() {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+
+    console.log("The Human Choice is:  " + humanChoice);
+    console.log("The Computer Choice is:  " + computerChoice);
+    
+}
+
+playRound();
+
+
